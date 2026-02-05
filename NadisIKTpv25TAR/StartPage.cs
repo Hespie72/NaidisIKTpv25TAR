@@ -16,7 +16,7 @@ namespace NadisIKTpv25TAR
             //Console.ForegroundColor = ConsoleColor.Blue;
             string tekst = "123";
             Console.WriteLine($"Oli loodud muutuja tekst, mis võrdub: {tekst}");
-            Console.WriteLine("Oli loodud muutja tekst, mis võrdub: {0}", tekst);
+            /*Console.WriteLine("Oli loodud muutja tekst, mis võrdub: {0}", tekst);
             Console.Write("Mis on sinu nimi?: ");
             string nimi = Console.ReadLine();
             Console.Write("Kui vana sa oled?: ");
@@ -41,8 +41,30 @@ namespace NadisIKTpv25TAR
             catch (Exception d)
             {
                 Console.WriteLine(d);
+            }*/
+            /*Random rnd = new Random();
+            int juhustlik_arv = rnd.Next(-5,25);
+            Console.WriteLine(NaidisFunktsioonid.Kuu_nimetus(juhustlik_arv));
+            juhustlik_arv = rnd.Next(-5, 25);
+            tekst = NaidisFunktsioonid.Kuu_nimetus(juhustlik_arv);
+            Console.WriteLine(tekst);
+            Console.WriteLine("Sisesta sõpru nimi: ");
+            string sõbrnimi = Console.ReadLine();
+            if*/
+            try
+            {
+                Console.WriteLine("Mis on sinu nimi");
+                string nimi = Console.ReadLine();
+                Console.WriteLine("Kui vana sa oled?");
+                int vanus = int.Parse(Console.ReadLine());
+                ulesanded.kinno(nimi, vanus);
             }
-
+            catch (Exception b)
+            {
+                Console.WriteLine(b);
+            }
+            
+            
 
         }
     }

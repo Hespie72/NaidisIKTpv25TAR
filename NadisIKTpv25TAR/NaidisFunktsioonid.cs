@@ -10,7 +10,7 @@ namespace NadisIKTpv25TAR
     {
         public static float Summa(float arv1, float arv2)
         {
-            return arv1+arv2;
+            return arv1 + arv2;
         }
         public static string Kuu_nimetus(int kuu_nr)
         {
@@ -61,6 +61,55 @@ namespace NadisIKTpv25TAR
                 hoo = "???";
             }
             return hoo;
+        }
+        int[] arvud = new int[5];
+        public static void Muuda_element_massiivis(int[] arvud)
+        {
+            int pos;
+            Console.WriteLine("Sisesta mis positsiooni sa tahad muuda: ");
+            pos = int.Parse(Console.ReadLine());
+            Console.WriteLine("Mis number sa tahad?: ");
+            int uusarv;
+            uusarv = int.Parse(Console.ReadLine());
+            arvud[pos - 1] = uusarv;
+            Console.WriteLine("Uuendatud massiiv");
+            for (int i = 0; i < arvud.Length; i++)
+            {
+                Console.WriteLine(arvud[i]);
+            }
+        }
+
+        public static int[] Täida_massiiv(int[] arvud)
+        {
+            for (int i = 0; i < arvud.Length; i++)
+            {
+                Console.WriteLine($"Sisesta {i + 1}. arv: ");
+                try
+                {
+                    arvud[i] = int.Parse(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e);
+                }
+            }
+            return arvud;
+        }
+        public static void Massiivide_kuvamine(int[] arvud)
+        {
+            for (int i = 0; i < arvud.Length; i++)
+            {
+                Console.WriteLine($"Sisetatud arv: {arvud[i]}");
+            }
+            
+        }
+        public static void foreac(int[] arvud)
+        {
+            for (int i = arvud.Length - 1; i > -1; i--)
+            {
+                Console.WriteLine($"Sisetatud arv: {arvud[i]}");
+            }
         }
     }
 }

@@ -41,6 +41,39 @@ namespace NadisIKTpv25TAR
                 Console.WriteLine(d);
             }
             return $"Nagemist {nimi}";
+
+        public static int porandPindal(int pikkus1, int pikkus2)
+        {
+            int porand = pikkus1 * pikkus2;
+            return porand;
+        }
+
+        public static int remondihinnearvutamine(int pikkus)
+        {
+            int hind = pikkus * 15;
+            return hind;
+        }
+
+        public static string temperatuur(int temp)
+        {
+            string Message1 = "";
+            try
+            {
+                if (temp > 17)
+                {
+                    Message1 = "Temperatuur on kõigem kui 18 kraadi";
+                }
+                else if (temp < 18)
+                {
+                    Message1 = "Temperatuur on vähem kui 18 kraadi";
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            return Message1;
+
         }
     }
 }

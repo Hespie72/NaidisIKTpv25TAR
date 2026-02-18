@@ -74,12 +74,40 @@ namespace NadisIKTpv25TAR
                 Console.WriteLine(e);
             }
             return Message1;
-            public static string inimesedpik(int pikk)
+        public static string inimesedpik(int pikk)
+        {
+        string message = "";
+        try
+        {
+            if (pikk <= 140)
             {
+                message = "Sa oled lühike";
+            }
+            else if (pikk > 140 && pikk <= 185)
+            {
+                message = "Sa oled keskmine";
+            }
+            else if (pikk > 185)
+            {
+                message = "Sa oled pikk";
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+        return message;
+        }
+    
+        public static string pikkussugu(string sugu)
+        {
             string message = "";
-            try
+            int pikkus = 0;
+            Console.WriteLine("Sisesta pikkus: ");
+            pikkus = int.Parse(Console.Readline());
+            if (sugu = "mees")
             {
-                if (pikk <= 140)
+                if (pikk < 140)
                 {
                     message = "Sa oled lühike";
                 }
@@ -92,50 +120,22 @@ namespace NadisIKTpv25TAR
                     message = "Sa oled pikk";
                 }
             }
-            catch (Exception e)
+            else if (sugu = "naine")
             {
-                Console.WriteLine(e);
-            }
-            return message;
-            }
-        
-            public static string pikkussugu(string sugu)
-            {
-                string message = "";
-                int pikkus = 0;
-                Console.WriteLine("Sisesta pikkus: ");
-                pikkus = int.Parse(Console.Readline());
-                if (sugu = "mees")
+                if (pikk <= 130)
                 {
-                    if (pikk < 140)
-                    {
-                        message = "Sa oled lühike";
-                    }
-                    else if (pikk > 140 && pikk <= 185)
-                    {
-                        message = "Sa oled keskmine";
-                    }
-                    else if (pikk > 185)
-                    {
-                        message = "Sa oled pikk";
-                    }
+                    message = $"Sa oled lühike ja sa oled {sugu}";
                 }
-                else if (sugu = "naine")
+                else if (pikk > 130 && pikk <= 170)
                 {
-                    if (pikk <= 130)
-                    {
-                        message = $"Sa oled lühike ja sa oled {sugu}";
-                    }
-                    else if (pikk > 130 && pikk <= 170)
-                    {
-                        message = $"Sa oled keskmine ja sa oled {sugu}";
-                    }
-                    else if (pikk > 170)
-                    {
-                        message = $"Sa oled pikk ja sa oled {sugu}";
-                    }
+                    message = $"Sa oled keskmine ja sa oled {sugu}";
                 }
-            return message;
+                else if (pikk > 170)
+                {
+                    message = $"Sa oled pikk ja sa oled {sugu}";
+                }
+            }
+        return message;
 
         }
     }

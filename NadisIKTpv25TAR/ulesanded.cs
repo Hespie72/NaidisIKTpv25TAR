@@ -41,6 +41,7 @@ namespace NadisIKTpv25TAR
                 Console.WriteLine(d);
             }
             return $"Nagemist {nimi}";
+        }
 
         public static int porandPindal(int pikkus1, int pikkus2)
         {

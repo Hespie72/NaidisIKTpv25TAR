@@ -11,6 +11,12 @@ namespace NadisIKTpv25TAR
         {
             Console.OutputEncoding = Encoding.UTF8;
             Console.ForegroundColor = ConsoleColor.Yellow;
+            public static void Main(string[] args)
+        {
+            double[] arvud = NaidisFunktsioonid.Täida_massiiv_double(new double[5]);
+            var tulemus = Osa3.AnaluusiArvel(arvud);
+            Console.WriteLine($"Summa {tulemus.Item1}, Keskmine {tulemus.Item2}, korrutis: {tulemus.Item3}");
+        
             Console.WriteLine("3. Osa. Kordused ja Listid, massivid");
             Console.WriteLine("For:");
             for(int i=0; i<10;i++)

@@ -110,6 +110,7 @@ namespace NadisIKTpv25TAR
             {
                 Console.WriteLine($"Sisetatud arv: {arvud[i]}");
             }
+
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace NadisIKTpv25TAR
@@ -29,6 +30,18 @@ namespace NadisIKTpv25TAR
             return ruudud;
 
         }
+        public static (double summa, double keskmine, double korrutis) AnaluusiArvel(double[] arvud)
+        {
+            double summa = arvud.Sum();
+            double keskmine = arvud.Average();
+            double korrutis = 1;
+            foreach (double arv in arvud)
+            {
+                korrutis *= arv;
+            }
+            return(summa, keskmine, korrutis);
+        }
+        
     }
 }
 

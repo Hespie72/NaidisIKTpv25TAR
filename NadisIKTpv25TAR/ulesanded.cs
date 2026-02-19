@@ -31,6 +31,10 @@ namespace NadisIKTpv25TAR
                 {
                     Console.WriteLine("Error");
                 }
+                else if (nimi.ToLower() != "juku")
+                {
+                    Console.WriteLine($"Tere, {nimi}");
+                }
                 else
                 {
                     Console.WriteLine("Error");
@@ -74,6 +78,7 @@ namespace NadisIKTpv25TAR
                 Console.WriteLine(e);
             }
             return Message1;
+        }
         public static string inimesedpik(int pikk)
         {
         string message = "";
@@ -102,10 +107,10 @@ namespace NadisIKTpv25TAR
         public static string pikkussugu(string sugu)
         {
             string message = "";
-            int pikkus = 0;
+            int pikk = 0;
             Console.WriteLine("Sisesta pikkus: ");
-            pikkus = int.Parse(Console.Readline());
-            if (sugu = "mees")
+            pikk = int.Parse(Console.ReadLine());
+            if (sugu == "mees")
             {
                 if (pikk < 140)
                 {
@@ -120,7 +125,7 @@ namespace NadisIKTpv25TAR
                     message = "Sa oled pikk";
                 }
             }
-            else if (sugu = "naine")
+            else if (sugu == "naine")
             {
                 if (pikk <= 130)
                 {

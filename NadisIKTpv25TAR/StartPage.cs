@@ -8,73 +8,83 @@ namespace NadisIKTpv25TAR
     public class StartPage
     {
         public static void Main(string[] args)
-        {
+        { 
+            
+
+
+
+
+
+
             Console.OutputEncoding = Encoding.UTF8;
             Console.ForegroundColor = ConsoleColor.Yellow;
-            public static void Main(string[] args)
-        {
-            double[] arvud = NaidisFunktsioonid.Täida_massiiv_double(new double[5]);
-            var tulemus = Osa3.AnaluusiArvel(arvud);
-            Console.WriteLine($"Summa {tulemus.Item1}, Keskmine {tulemus.Item2}, korrutis: {tulemus.Item3}");
-        
-            Console.WriteLine("3. Osa. Kordused ja Listid, massivid");
-            Console.WriteLine("For:");
-            for(int i=0; i<10;i++)
-            {
-                Console.WriteLine($"Tere, {i+1}!");
-            }
-            Console.WriteLine("While:");
-            int j = 0;
-            while(j<10)
-            {
-                Console.WriteLine($"Tere, {j+1}!");
-                j++;
-            }
-            Console.WriteLine("Do: ");
-            do
-            {
-                Console.WriteLine($"Tere, {11 - j}!");
-                j--;
-            } 
-            while (j!=0);
-            int[] arvud = new int[5];
-            Console.WriteLine("Täisarvude massiiv: ");
-            arvud = NaidisFunktsioonid.Täida_massiiv(arvud);
-            Console.WriteLine("Foreach abil:");
-            foreach (int arv in arvud)
-            {
-                Console.WriteLine($"Sisestatud arv: {arv}");
-            }
-            Console.WriteLine("For abil: eesimine-> viimane");
-            NaidisFunktsioonid.Massiivide_kuvamine(arvud);
-            Console.WriteLine("For abil: viimane->esimene");
-            NaidisFunktsioonid.foreac(arvud);
-            //Küsi mis positsioonil muuda element ja mis väärtuseks, muuda element ja kuva massiiv
-            NaidisFunktsioonid.Muuda_element_massiivis(arvud);
 
-            List<Isik> inimesed = new List<Isik>();
 
-            for (int i = 0; i < 3; i++)
-            {
-                Console.Write("Sisesta nimi: ");
-                string nimi = Console.ReadLine();
 
-                Console.Write("Sisesta vanus: ");
-                int vanus = int.Parse(Console.ReadLine());
+            //    public static void Main(string[] args)
+            //{
+            //    double[] arvud = NaidisFunktsioonid.Täida_massiiv(new double[5]);
+            //    var tulemus = Osa3.AnaluusiArvel(arvud);
+            //    Console.WriteLine($"Summa {tulemus.Item1}, Keskmine {tulemus.Item2}, korrutis: {tulemus.Item3}");
 
-                Isik uusIsik = new Isik();
-                uusIsik.Nimi = nimi;
-                uusIsik.Vanus = vanus;
+            //    Console.WriteLine("3. Osa. Kordused ja Listid, massivid");
+            //    Console.WriteLine("For:");
+            //    for(int i=0; i<10;i++)
+            //    {
+            //        Console.WriteLine($"Tere, {i+1}!");
+            //    }
+            //    Console.WriteLine("While:");
+            //    int j = 0;
+            //    while(j<10)
+            //    {
+            //        Console.WriteLine($"Tere, {j+1}!");
+            //        j++;
+            //    }
+            //    Console.WriteLine("Do: ");
+            //    do
+            //    {
+            //        Console.WriteLine($"Tere, {11 - j}!");
+            //        j--;
+            //    } 
+            //    while (j!=0);
+            //    int[] arvud = new int[5];
+            //    Console.WriteLine("Täisarvude massiiv: ");
+            //    arvud = NaidisFunktsioonid.Täida_massiiv(arvud);
+            //    Console.WriteLine("Foreach abil:");
+            //    foreach (int arv in arvud)
+            //    {
+            //        Console.WriteLine($"Sisestatud arv: {arv}");
+            //    }
+            //    Console.WriteLine("For abil: eesimine-> viimane");
+            //    NaidisFunktsioonid.Massiivide_kuvamine(arvud);
+            //    Console.WriteLine("For abil: viimane->esimene");
+            //    NaidisFunktsioonid.foreac(arvud);
+            //    //Küsi mis positsioonil muuda element ja mis väärtuseks, muuda element ja kuva massiiv
+            //    NaidisFunktsioonid.Muuda_element_massiivis(arvud);
 
-                inimesed.Add(uusIsik);
-            }
+            //    List<Isik> inimesed = new List<Isik>();
 
-            Console.WriteLine("\nKõik inimesed tervitavad:\n");
+            //    for (int i = 0; i < 3; i++)
+            //    {
+            //        Console.Write("Sisesta nimi: ");
+            //        string nimi = Console.ReadLine();
 
-            foreach (Isik isik in inimesed)
-            {
-                isik.Tervita();
-            }
+            //        Console.Write("Sisesta vanus: ");
+            //        int vanus = int.Parse(Console.ReadLine());
+
+            //        Isik uusIsik = new Isik();
+            //        uusIsik.Nimi = nimi;
+            //        uusIsik.Vanus = vanus;
+
+            //        inimesed.Add(uusIsik);
+            //    }
+
+            //    Console.WriteLine("\nKõik inimesed tervitavad:\n");
+
+            //    foreach (Isik isik in inimesed)
+            //    {
+            //        isik.Tervita();
+            //    }
 
             //Console.BackgroundColor = ConsoleColor.Green;
             //Console.ForegroundColor = ConsoleColor.Blue;
@@ -127,9 +137,105 @@ namespace NadisIKTpv25TAR
             //{
             //    Console.WriteLine(b);
             //}
+            int[] arvud = new int[5];
+            while (true)
+            {
+                Console.WriteLine("2. Osa Funktsioonid");
+                Console.WriteLine("vali funktioon \n1. Juku \n2. pinginabrid\n3. pindala\n4. soodus\n5. tem\n6. pikk\n7. pood\n8. MuudaElement\n9. Täida_massiiv\n10. foreachFunktisoon\n11. GenereeriRuudud\n12. exit ");
+                int valik = int.Parse(Console.ReadLine());
+                if (valik == 1)
+                {
+                    Console.WriteLine("Sisesta nimi: ");
+                    string nimi = Console.ReadLine();
+                    Console.WriteLine("Sisesta vanus: ");
+                    int vanus = int.Parse(Console.ReadLine());
+                    ulesanded.kinno(nimi, vanus);
 
+                }
+                else if (valik == 2)
+                {
+                    Console.WriteLine("Sisesta nimi: ");
+                    string sugu = Console.ReadLine();
+                    ulesanded.pikkussugu(sugu);
 
+                }
+                else if (valik == 3)
+                {
+                    Console.WriteLine("Sisesta nimi: ");
+                    int pikkus1 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Sisesta vanus: ");
+                    int pikkus2 = int.Parse(Console.ReadLine());
+                    ulesanded.porand(pikkus1, pikkus2);
 
+                }
+                else if (valik == 4)
+                {
+                    ulesanded.temperaturi(temp);
+
+                }
+                else if (valik == 5)
+                {
+                    ulesanded.remondihinearvutamine(pik);
+
+                }
+                else if (valik == 6)
+                {
+                    ulesanded.pikkussugu(sugu);
+
+                }
+                else if (valik == 7)
+                {
+
+                    ulesanded.inimesedpik(pikk);
+
+                }
+
+                else if (valik == 8)
+                {
+                    NaidisFunktsioonid.Muuda_element_massiivis(arvud);
+                }
+                else if (valik == 9)
+                {
+
+                    NaidisFunktsioonid.Täida_massiiv(arvud);
+                }
+                else if (valik == 10)
+                {
+                    NaidisFunktsioonid.foreac(arvud);
+                }
+                else if (valik == 11)
+                {
+                    List<Inimene> Inimesed = new List<Inimene>();
+                    //Inimene inimene1 = new Inimene("Ilya", 17);
+                    //Inimesed_list.Add(inimene1);
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Console.WriteLine("Mis on sinu nimi on?: ");
+                        string nimi = Console.ReadLine();
+                        Console.WriteLine($"Mis on teise inimese{i + 1}. vanus?: ");
+                        int vanus = int.Parse(Console.ReadLine());
+                        Inimene inimene = new Inimene(nimi, vanus);
+                        Inimesed.Add(inimene);
+                    }
+                    Osa3.Statistika(Inimesed);
+                    var inimese = Osa3.Statistika(Inimesed);
+                    Console.WriteLine($"vanuste arv: {inimese.Item1}");
+                    Console.WriteLine($"vanuste keskmine: {inimese.Item2}");
+                    Console.WriteLine($"vanim inimene: {inimese.Item3.Nimi}");
+                    Console.WriteLine($"noorim inimene {inimese.Item4.Nimi}");
+                }
+                else if (valik == 12)
+                {
+                    string[] nimed = {"Anna", "Peeter", "Markus", "Artur", "Sofia", "Rasmus", "Alina"}
+                    Osa3.õpilastegaMängime(nimed);
+                }
+                else
+                {
+                    Console.WriteLine("vali arv 1-11: ");
+
+                }
+                
+                
         }
     }
 }

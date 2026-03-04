@@ -5,6 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>NadisIKTpv25TAR.Osa4_StartPage</StartupObject>
   </PropertyGroup>
 
 </Project>

@@ -140,7 +140,7 @@ namespace NadisIKTpv25TAR
             int[] arvud = new int[5];
             while (true)
             {
-                Console.WriteLine("2. Osa Funktsioonid");
+                Console.WriteLine("2-3 Osa Funktsioonid");
                 Console.WriteLine("vali funktioon \n1. Juku \n2. pinginabrid\n3. pindala\n4. soodus\n5. tem\n6. pikk\n7. pood\n8. MuudaElement\n9. Täida_massiiv\n10. foreachFunktisoon\n11. GenereeriRuudud\n12. exit ");
                 int valik = int.Parse(Console.ReadLine());
                 if (valik == 1)
@@ -149,7 +149,7 @@ namespace NadisIKTpv25TAR
                     string nimi = Console.ReadLine();
                     Console.WriteLine("Sisesta vanus: ");
                     int vanus = int.Parse(Console.ReadLine());
-                    Osa1.kinno(nimi, vanus);
+                    Osa2.kinno(nimi, vanus);
 
                 }
                 else if (valik == 2)
@@ -158,7 +158,7 @@ namespace NadisIKTpv25TAR
                     string sugu = Console.ReadLine();
                     if (sugu.ToLower() == "naine" || sugu.ToLower() == "mees")
                     {
-                        Osa1.pikkussugu(sugu);
+                        Osa2.pikkussugu(sugu);
                     }
                     else
                         Console.WriteLine("Sisesta sugu!");
@@ -170,21 +170,21 @@ namespace NadisIKTpv25TAR
                     int pikkus1 = int.Parse(Console.ReadLine());
                     Console.WriteLine("Sisesta vanus: ");
                     int pikkus2 = int.Parse(Console.ReadLine());
-                    Osa1.porand(pikkus1, pikkus2);
+                    Osa2.porand(pikkus1, pikkus2);
 
                 }
                 else if (valik == 4)
                 {
                     Console.WriteLine("Sisesta temperatuur: ");
                     int temp = int.Parse(Console.ReadLine());
-                    Osa1.temperaturi(temp);
+                    Osa2.temperaturi(temp);
 
                 }
                 else if (valik == 5)
                 {
                     Console.WriteLine("Sisesta pikkus: ");
                     int pik = int.Parse(Console.ReadLine());
-                    Osa1.remondihinearvutamine(pik);
+                    Osa2.remondihinearvutamine(pik);
 
                 }
                 else if (valik == 6)
@@ -197,7 +197,7 @@ namespace NadisIKTpv25TAR
                 {
                     Console.WriteLine("Sisesta oma pikkus");
                     int pikk = int.Parse(Console.ReadLine());
-                    Osa1.inimesedpik(pikk);
+                    Osa2.inimesedpik(pikk);
 
                 }
 

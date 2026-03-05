@@ -5,7 +5,7 @@ using System.Threading.Channels;
 
 namespace NadisIKTpv25TAR
 {
-    internal class Osa1
+    internal class Osa2
     {
         public static string kinno(string nimi, int vanus)
         {

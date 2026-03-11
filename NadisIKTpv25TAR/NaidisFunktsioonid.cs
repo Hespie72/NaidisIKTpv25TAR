@@ -96,13 +96,25 @@ namespace NadisIKTpv25TAR
             }
             return arvud;
         }
-        public static void Massiivide_kuvamine(int[] arvud)
+        public static double[] Täida_Doublemassiiv(double[] arvud)
         {
-            for (int i = 0; i < arvud.Length; i++)
+
+            for (int i = 1; i < arvud.Length; i++)
             {
-                Console.WriteLine($"Sisetatud arv: {arvud[i]}");
+
+                Console.WriteLine($"sisesta {i}. arv: ");
+                try
+                {
+                    arvud[i] = Convert.ToDouble(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e);
+                }
+
             }
-            
+            return arvud;
         }
         public static void foreac(int[] arvud)
         {

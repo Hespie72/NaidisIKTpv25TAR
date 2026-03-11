@@ -140,111 +140,124 @@ namespace NadisIKTpv25TAR
             int[] arvud = new int[5];
             while (true)
             {
-                Console.WriteLine("2-3 Osa Funktsioonid");
-                Console.WriteLine("vali funktioon \n1. Juku \n2. pinginabrid\n3. pindala\n4. soodus\n5. tem\n6. pikk\n7. pood\n8. MuudaElement\n9. Täida_massiiv\n10. foreachFunktisoon\n11. GenereeriRuudud\n12. exit ");
-                int valik = int.Parse(Console.ReadLine());
-                if (valik == 1)
+                try
                 {
-                    Console.WriteLine("Sisesta nimi: ");
-                    string nimi = Console.ReadLine();
-                    Console.WriteLine("Sisesta vanus: ");
-                    int vanus = int.Parse(Console.ReadLine());
-                    Osa2.kinno(nimi, vanus);
-
-                }
-                else if (valik == 2)
-                {
-                    Console.WriteLine("Sisesta sugu: ");
-                    string sugu = Console.ReadLine();
-                    if (sugu.ToLower() == "naine" || sugu.ToLower() == "mees")
+                    Console.WriteLine("2-3 Osa Funktsioonid (2/3)");
+                    int valik = int.Parse(Console.ReadLine());
+                    if (valik == 2)
                     {
-                        Osa2.pikkussugu(sugu);
+                        Console.WriteLine("Vali 1. Juku kinno \n 2. Pinginaaber \n  3. reemondi kalkulatoor \n 4. Algse hind \n 5. Temperatuur \n 6. Inimene pikkus \n 7. Pikkus ja Sugu \n 8. Poes \n 9. valja");
+                        int valik2 = int.Parse(Console.ReadLine());
+                        if (valik2 == 1)
+                        {
+                            Console.WriteLine("Sisesta oma nimi: ");
+                            string nimi = Console.ReadLine();
+                            Console.WriteLine("Sisesta oma vanus: ");
+                            int vanus = int.Parse(Console.ReadLine());
+                            Osa2.kinno(nimi, vanus);
+                        }
+                        else if (valik2 == 2)
+                        {
+                            Osa2.Pinginaabrid();
+                        }
+                        else if (valik2 == 3)
+                        {
+                            Osa2.reemondiKalk();
+                        }
+                        else if (valik2 == 4)
+                        {
+                            Osa2.AlgneHind();
+                        }
+                        else if (valik2 == 5)
+                        {
+                            Osa2.Temperatuur();
+                        }
+                        else if (valik2 == 6)
+                        {
+                            Osa2.Pikkus();
+                        }
+                        else if (valik2 == 7)
+                        {
+                            Osa2.PikkusjaSugu();
+                        }
+                        else if (valik2 == 8)
+                        {
+                            Osa2.PoeLeib();
+                        }
+                        else if (valik2 == 9)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Palun sisesta 1-9");
+                        }
                     }
-                    else
-                        Console.WriteLine("Sisesta sugu!");
-
-                }
-                else if (valik == 3)
-                {
-                    Console.WriteLine("Sisesta nimi: ");
-                    int pikkus1 = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Sisesta vanus: ");
-                    int pikkus2 = int.Parse(Console.ReadLine());
-                    Osa2.porand(pikkus1, pikkus2);
-
-                }
-                else if (valik == 4)
-                {
-                    Console.WriteLine("Sisesta temperatuur: ");
-                    int temp = int.Parse(Console.ReadLine());
-                    Osa2.temperaturi(temp);
-
-                }
-                else if (valik == 5)
-                {
-                    Console.WriteLine("Sisesta pikkus: ");
-                    int pik = int.Parse(Console.ReadLine());
-                    Osa2.remondihinearvutamine(pik);
-
-                }
-                else if (valik == 6)
-                {
-
-
-
-                }
-                else if (valik == 7)
-                {
-                    Console.WriteLine("Sisesta oma pikkus");
-                    int pikk = int.Parse(Console.ReadLine());
-                    Osa2.inimesedpik(pikk);
-
-                }
-
-                else if (valik == 8)
-                {
-                    NaidisFunktsioonid.Muuda_element_massiivis(arvud);
-                }
-                else if (valik == 9)
-                {
-
-                    NaidisFunktsioonid.Täida_massiiv(arvud);
-                }
-                else if (valik == 10)
-                {
-                    NaidisFunktsioonid.foreac(arvud);
-                }
-                else if (valik == 11)
-                {
-                    List<Inimene> Inimesed = new List<Inimene>();
-                    //Inimene inimene1 = new Inimene("Ilya", 17);
-                    //Inimesed_list.Add(inimene1);
-                    for (int i = 0; i < 5; i++)
+                    else if (valik == 3)
                     {
-                        Console.WriteLine("Mis on sinu nimi on?: ");
-                        string nimi = Console.ReadLine();
-                        Console.WriteLine($"Mis on teise inimese{i + 1}. vanus?: ");
-                        int vanus = int.Parse(Console.ReadLine());
-                        Inimene inimene = new Inimene(nimi, vanus);
-                        Inimesed.Add(inimene);
+                        Console.WriteLine("sisesta 1-13");
+                        int valik3 = int.Parse(Console.ReadLine());
+                        if (valik3 == 1)
+                        {
+                            Console.WriteLine("Sisesta min: ");
+                            int min = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Sisesta max: ");
+                            int max = int.Parse(Console.ReadLine());
+                            Osa3.randomarvud(min, max);
+                        }
+                        else if (valik3 == 2)
+                        {
+                            double[] arvudMasiiv = NaidisFunktsioonid.Täida_Doublemassiiv(new double[5]);
+                            var tulemus = Osa3.AnaluusiArvel(arvudMasiiv);
+                            Console.WriteLine($"summa: {tulemus.Item1}, keskmine: {tulemus.Item2}, Korrutis: {tulemus.Item3}");
+                        }
+                        else if (valik == 3)
+                        {
+                            Osa3.ostsElevantAra();
+                        }
+                        else if (valik == 4)
+                        {
+                            Osa3.arvumang();
+                        }
+                        else if (valik == 5)
+                        {
+                            Osa3.SuurimNeliarv();
+                        }
+                        else if (valik == 6)
+                        {
+                            Console.WriteLine("Sisesta ridadeArv: ");
+                            int ridadeArv = int.Parse(Console.ReadLine()); // 10
+                            Console.WriteLine("Sisesta veergudeArv: ");
+                            int veergudeArv = int.Parse(Console.ReadLine()); // 10
+                            Osa3.GenereeriKorrutustabel(ridadeArv, veergudeArv);
+                        }
+                        else if (valik == 7)
+                        {
+                            Osa3.arvudRuudud();
+                        }
+                        else if (valik == 8)
+                        {
+                            Osa3.Positiivsed_ja_negatiivsed();
+                        }
+                        else if (valik == 9)
+                        {
+                            Osa3.rohkemkuiKeskmine();
+                        }
+                        else if (valik == 10)
+                        {
+                            Osa3.suurimJaIndeks();
+                        }
+                        else if (valik == 11)
+                        {
+                            Osa3.arvumang();
+                        }
                     }
-                    Osa3.Statistika(Inimesed);
-                    var inimese = Osa3.Statistika(Inimesed);
-                    Console.WriteLine($"vanuste arv: {inimese.Item1}");
-                    Console.WriteLine($"vanuste keskmine: {inimese.Item2}");
-                    Console.WriteLine($"vanim inimene: {inimese.Item3.Nimi}");
-                    Console.WriteLine($"noorim inimene {inimese.Item4.Nimi}");
                 }
-                else if (valik == 12)
+                catch (Exception e)
                 {
-                    string[] nimed = { "Anna", "Peeter", "Markus", "Artur", "Sofia", "Rasmus", "Alina" };
-                    Osa3.õpilastegaMängime(nimed);
+                    Console.WriteLine(e); 
                 }
-                else
-                {
-                    Console.WriteLine("vali arv 1-11: ");
-
-                }
+                
 
 
             }

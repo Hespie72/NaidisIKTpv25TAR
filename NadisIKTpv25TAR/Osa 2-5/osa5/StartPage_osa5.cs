@@ -13,7 +13,7 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
             switch (valik)
             {
                 case "1":
-                    osa5.Osa5_Listid();
+                    osa5_ulesanne.Osa5_Listid();
                     break;
                 case "2":
                     osa5_funktsioonid.Tuple();

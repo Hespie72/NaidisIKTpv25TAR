@@ -95,14 +95,14 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
     class Person
     {
         public string Name { get; set; }
-        // Конструктор (чтобы можно было писать new Person("Lisa"))
+        // конструктор (чтобы можно было писать new Person("Lisa"))
         public Person(string name)
         {
             Name = name;
         }
 
         public Person() { }
-        // Переопределяем сравнение (чтобы Remove работал по Name)
+        // переопределяем сравнение (чтобы Remove работал по Name)
         public override bool Equals(object obj)
         {
             return obj is Person p && p.Name == Name;
@@ -113,7 +113,7 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
             return Name != null ? Name.GetHashCode() : 0;
         }
 
-        // 1. Добавление и вывод
+        // добавление и вывод
         public static void List_Klassiga()
         {
             List<Person> people = new List<Person>()
@@ -126,7 +126,7 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
                 Console.WriteLine(p.Name);
         }
 
-        // 2. Удаление
+        // удаление
         public static void Remove_Listist()
         {
             List<Person> people = new List<Person>()
@@ -141,7 +141,7 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
                 Console.WriteLine(p.Name);
         }
 
-        // 3. Вставка
+        // вставка
         public static void Insert_Listisse()
         {
             List<Person> people = new List<Person>()
@@ -156,7 +156,7 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
                 Console.WriteLine(p.Name);
         }
 
-        // 4. Поиск индекса и удаление
+        // поиск индекса и удаление
         public static void Otsing_FindIndex()
         {
             List<Person> people = new List<Person>()
@@ -175,7 +175,7 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
                 Console.WriteLine(p.Name);
         }
 
-        // 5. Удаление объекта
+        // удаление объекта
         public static void Remove_Objekt()
         {
             List<Person> people = new List<Person>()
@@ -184,7 +184,7 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
             new Person("Mirje")
         };
 
-            people.Remove(new Person("Lisa")); // если нет — ничего не произойдёт
+            people.Remove(new Person("Lisa")); // если нет, ничего не произойдёт
 
             foreach (Person p in people)
                 Console.WriteLine(p.Name);

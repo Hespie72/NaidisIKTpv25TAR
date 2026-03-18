@@ -116,11 +116,7 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
         // добавление и вывод
         public static void List_Klassiga()
         {
-            List<Person> people = new List<Person>()
-        {
-            new Person("Kadi"),
-            new Person("Mirje")
-        };
+            List<Person> people = new List<Person>() { new Person("Kadi"), new Person("Mirje") };
 
             foreach (Person p in people)
                 Console.WriteLine(p.Name);
@@ -129,11 +125,7 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
         // удаление
         public static void Remove_Listist()
         {
-            List<Person> people = new List<Person>()
-        {
-            new Person("Kadi"),
-            new Person("Mirje")
-        };
+            List<Person> people = new List<Person>() { new Person("Kadi"), new Person("Mirje") };
 
             people.Remove(new Person("Kadi"));
 
@@ -144,11 +136,7 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
         // вставка
         public static void Insert_Listisse()
         {
-            List<Person> people = new List<Person>()
-        {
-            new Person("Kadi"),
-            new Person("Mirje")
-        };
+            List<Person> people = new List<Person>() { new Person("Kadi"), new Person("Mirje") };
 
             people.Insert(1, new Person("Juku"));
 
@@ -159,11 +147,7 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
         // поиск индекса и удаление
         public static void Otsing_FindIndex()
         {
-            List<Person> people = new List<Person>()
-        {
-            new Person("Kadi"),
-            new Person("Mirje")
-        };
+            List<Person> people = new List<Person>() { new Person("Kadi"), new Person("Mirje") };
 
             int index = people.FindIndex(p => p.Name == "Kadi");
             Console.WriteLine($"Person index: {index}");
@@ -178,11 +162,7 @@ namespace NadisIKTpv25TAR.Osa_2_4.osa5
         // удаление объекта
         public static void Remove_Objekt()
         {
-            List<Person> people = new List<Person>()
-        {
-            new Person("Kadi"),
-            new Person("Mirje")
-        };
+            List<Person> people = new List<Person>() { new Person("Kadi"), new Person("Mirje") };
 
             people.Remove(new Person("Lisa")); // если нет, ничего не произойдёт
 
